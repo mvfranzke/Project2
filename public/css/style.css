@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color:#696969;
+  /*background-image: url("/images/ring-background.png.png"); */
+}
+
+main {
+  flex: 1;
+  background-image: url("/images/ring-background.png.png");
+}
+
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(251, 245, 245, 0.3);
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: left;
+  list-style: none;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  background-color: #333;
+  border-bottom: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar li a:hover {
+  background-color: #666;
+  transform: scale(1.1);
+}
+
+.navbar li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.navbar li a:hover::after {
+  width: 100%;
+}
+
+.header {
+  position: relative;
+}
+
+.header-container {
+  background-image: url("/images/nft-logo-no-text.png.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size:auto;
+  height: 125px; /* Adjust the height as needed */
+  position: relative;
+}
+
+.header-container::before {
+  content: "";
+  background-image: url("/images/banner background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.banner {
+  /* Your banner styles */
+  text-align:left;
+  padding: 50px;
+  padding-left: 110px;
+  color: #fff;
+  text-shadow: 
+    0 0 10px rgba(255, 0, 255, 0.8), /* Bright pink */
+    0 0 10px rgba(0, 255, 255, 0.8), /* Cyan */
+    0 0 10px rgba(255, 255, 0, 0.8); /* Yellow */
+}
+
+
+.div-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.div-container hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  bottom: 0;
+}
+
+footer p {
+  margin-bottom: 5px;
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.heart {
+  color: #D86EC1ff;
+}
+
+.login-div-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.login-div-container form {
+  width: 300px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+  padding: 20px;
+  color: white;
+}
+
+.login-div-container p {
+  margin-bottom: 15px;
+}
+
+.login-div-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-div-container input[type="text"],
+.login-div-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-div-container button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-div-container button:hover {
+  background-color: #666;
+}
+
+.login-div-container a {
+  color: #fff;
+  text-decoration:underline;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.login-div-container a:hover {
+  text-shadow: 2px 2px 4px rgba(196, 129, 208, 1);
+}
+
+
+.shadow-underline {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  color: #333;
+  text-decoration: none;
+  transition: box-shadow 0.3s, text-decoration 0.3s;
+}
+
+.shadow-underline::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fdfdfd;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.shadow-underline:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-underline:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* style for table in marketplace */
+.maketplace-container {
+  width: 80%;
+  border-collapse: collapse;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+  padding: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(251, 245, 245, 0.3);
+}
+
+.maketplace-container th {
+  background-color: #333;
+  border-bottom: 10px double #ccc;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.maketplace-container td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  color: white;
+  text-align: left;
+}
+
+.maketplace-container tr:nth-child(even) {
+  background-color: #696969;
+}
+
+.maketplace-container tr:hover {
+  background-color: #808080;
+}
+
+.maketplace-container th {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px double #ccc; /* Apply double dashed border style to the bottom */
+}
+
+.maketplace-container a {
+  background-color: #2a2b2a;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Increase the padding to adjust the button size */
+  border-radius: 8px; /* Adjust the border radius as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  cursor: pointer;
+  position: relative; /* Add position relative for pseudo-element */
+  text-decoration: none; /* Remove default underline */
+}
+
+.maketplace-container a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #cc4db3; /* Color of the underline */
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.maketplace-container a:hover::before {
+  transform: scaleX(1); /* Show the underline on hover */
+}
+
+.maketplace-container a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  box-shadow: 0 10px 10px rgba(218, 47, 183, 0.2); /* Add box shadow effect */
+}
+
+/* pops the pics of category photos in marketplace */
+.pop-image {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pop-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  filter: brightness(200%);
+}
+
+/* homepage card holder */
+    .featured-items {
+      margin-top: 25px;
+    }
+    
+    .item-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .item {
+      width: 300px;
+      margin: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+      padding: 10px;
+      color: white;
+    }
+
+    .item img {
+      max-width: 100%;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+
+    .item h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .item p {
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #4caf50;
+      margin-bottom: 10px;
+    }
+
+.script-homepage {
+  font-size: 35px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add the text shadow */
+}
+
+.script-homepage-p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: white;
+  overflow-wrap: break-word; 
+  width: 80%;
+}
+
+/*  */
+
+ .items-table {
+width: 100%;
+        border-collapse: collapse;
+        background-color: #f5f5f5;
+        border: 10px solid #ddd;
+        border-radius: 25px;
+        margin: auto;
+}
+
+    .items-table th,
+    .items-table td {
+        padding: 5px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+
+    }
+
+    .items-table th {
+        background-color: #f9f9f9;
+        border-radius: 25px;
+
+}
+
+    .price {
+        font-weight: bold;
+    }
+
+    .table-wrapper {
+        padding: 20px; 
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+        display:inline-block;
+        text-align: center;
+}
+
+.div-items-container {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

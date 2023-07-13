@@ -1,0 +1,47 @@
+===== Features to Consider =====
+User given a default amount of currency
+Checkout page
+Virtual items
+Demo of user buying the item
+User Table
+Might need an images folder
+Trading between users
+Bank as its own model?
+Users table
+User inventory
+References items table and what items they have
+Currency
+Items table
+A way to accumulate currency
+    Cookie-clicker-esque button where you click it a bunch of times for money
+        Maybe it can increment in random values
+    Slot machine concept? 
+    Can take out loans? 
+        If negative, lose items of equivalent value
+            make the user choose from a list of items and they display their values
+    Pawn shop for items?
+AI Images for items
+User can create own items? (after MVP, future feature)
+teddy bears
+Verify user input when they are creating an item and make "category_id" accept a text input (human input), rather than a number
+
+===== Endpoints (page urls) =====
+Homepage
+Marketplace (where you can view a list of items)
+    Filters for the Marketplace using the ':' to filter items by id based on what the user has checkboxed
+Item list
+
+===== Acronym =====
+NFTs
+Network
+Fantasy
+Trading 
+Site
+
+===== Other Notes =====
+1 eldergold is actually 1 billion usd
+
+
+===== Questions =====
+1. What session in express-session?
+2. What exactly is connect-session-sequelize again?

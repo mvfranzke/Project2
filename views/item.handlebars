@@ -1,0 +1,34 @@
+<div class="div-items-container">
+    <div class="table-wrapper">
+        <br>
+        <h2>Item Details</h2>
+        <hr>
+    <table class="items-table">
+    <tr>
+        <th>QR Code</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><img src="{{item.item_QR}}" alt="{{item.name}} QR code"></td>
+        <td rowspan="5"><img src={{item.item_img}} alt={{item.item_name}}></td>
+    </tr>
+    <tr>
+        <td>{{item.item_name}}</td>
+    </tr>
+    <tr>
+        <td>{{item.description}}</td>
+    </tr>
+    <tr>
+        <td>
+            <p class="price">Eldergold: {{item.price}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Items in Stock: {{item.stock}}</p>
+        </td>
+    </tr>
+</table>
+</div>
+</div>
+

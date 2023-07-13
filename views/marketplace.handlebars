@@ -1,0 +1,29 @@
+<div class="div-container">
+    <br>
+    <h2>Marketplace</h2>
+    <hr>
+    <table class="maketplace-container">
+        <tr>
+            <th>Option</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Category</th>
+        </tr>
+        {{#each items as |item|}}
+        <tr>
+            <td><a href="/item/{{id}}">View</a></td>
+            <td>{{item.item_name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.stock}}</td>
+            {{!-- <td>{{item.category_id}}</td> --}}
+            <td><img src={{item.item_img}} alt={{item.item_name}} title={{item.item_name}} height="65px" class="pop-image"></td>    
+        </tr>
+        {{/each}}
+    </table>
+</div>
+{{!-- <script src="/js/itemDetails.js"></script> --}}
+
+

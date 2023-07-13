@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const { Item } = require('../../models');
+const withAuth = require("../../utils/auth");
 
 // Endpoint: /api/items
 
 // get all items
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const itemData = await Item.findAll();
         res.status(200).json(itemData);
@@ -14,7 +15,7 @@ router.get('/', async (req, res) => {
 });
 
 // get a single item
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
         const itemData = await Item.findByPk(req.params.id);
         res.status(200).json(itemData);

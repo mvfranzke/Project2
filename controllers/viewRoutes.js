@@ -1,10 +1,16 @@
 const router = require('express').Router();
 const User = require('../models/User');
 const Item = require('../models/Item');
+const withAuth = require("../utils/auth");
 
 // the home endpoint
-router.get('/', async (req, res) => { 
-  res.render('home');
+router.get('/', async (req, res) => {
+  try{
+    res.render('home')
+  } catch(err) {
+    res.status(500).json(err)
+  }
+  
 });
 
 router.get('/login', async (req, res) => {

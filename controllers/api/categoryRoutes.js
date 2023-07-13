@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const { Category } = require('../../models');
+const withAuth = require("../../utils/auth");
 
 // Endpoint: /api/categories
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const categories = await Category.findAll();
         res.status(200).json(categories);
